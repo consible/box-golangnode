@@ -4,6 +4,6 @@ deploy:
     - internal/docker-push:
         username: $DOCKERHUB_USERNAME
         password: $DOCKERHUB_PASSWORD
-        tag: 1.0
+        tag: sandbox
         repository: consiblehq/box-golangnode
         registry: https://registry.hub.docker.com

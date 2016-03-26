@@ -1,4 +1,4 @@
-box: wercker/golang@1.4.0
+box: wercker/default
 build:
   steps:
 

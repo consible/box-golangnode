@@ -1,4 +1,10 @@
 box: wercker/default
+build:
+  steps:
+    - script:
+        name: echo test message
+        code: |
+          echo "this is a test message!"
 deploy:
   steps:
     - internal/docker-push:

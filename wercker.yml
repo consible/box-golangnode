@@ -6,4 +6,3 @@ deploy:
         password: $DOCKERHUB_PASSWORD
         tag: sandbox
         repository: consiblehq/box-golangnode
-        registry: https://registry.hub.docker.com

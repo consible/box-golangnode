@@ -1,23 +1,30 @@
-name: golang
+name: golangnode
 version: 1.4.0
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type : main
 platform : ubuntu@12.04
-description : golang
+description : golang/nodejs
 keywords:
   - golang
   - go
+  - nodejs
+  - npm
 packages :
   - golang@1.5
   - git
   - mercurial
   - bzr
+  - nodejs
+  - npm
 script : |
   version="1.5"
 
   sudo apt-get update
   sudo apt-get install bzr
   sudo apt-get install mercurial
+  sudo apt-get install nodejs
+  sudo apt-get install npm
+
   wget http://golang.org/dl/go${version}.linux-amd64.tar.gz
   sudo tar -C /usr/local -xzf go${version}.linux-amd64.tar.gz
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
@@ -48,7 +55,7 @@ box-detect:
     - files:
       - server.go
     - partOfFiles:
-      - ".go"  
+      - ".go"
 
 default-build:
   go:

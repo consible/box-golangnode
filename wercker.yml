@@ -1,3 +1,7 @@
+box: wercker/default
+build:
+  steps:
+
 deploy:
   steps:
     - internal/docker-push:
